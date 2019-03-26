@@ -1,0 +1,18 @@
+.header {
+  padding: 10px;
+  background: rgba(19, 66, 128, 1);
+  background: -moz-linear-gradient(left, rgba(19, 66, 128, 1) 0%, rgba(16, 57, 112, 1) 18%, rgba(22, 78, 150, 1) 50%, rgba(25, 80, 153, 1) 51%, rgba(21, 76, 148, 1) 71%, rgba(19, 66, 128, 1) 85%, rgba(19, 66, 128, 1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(19, 66, 128, 1)), color-stop(18%, rgba(16, 57, 112, 1)), color-stop(50%, rgba(22, 78, 150, 1)), color-stop(51%, rgba(25, 80, 153, 1)), color-stop(71%, rgba(21, 76, 148, 1)), color-stop(85%, rgba(19, 66, 128, 1)), color-stop(100%, rgba(19, 66, 128, 1)));
+  background: -webkit-linear-gradient(left, rgba(19, 66, 128, 1) 0%, rgba(16, 57, 112, 1) 18%, rgba(22, 78, 150, 1) 50%, rgba(25, 80, 153, 1) 51%, rgba(21, 76, 148, 1) 71%, rgba(19, 66, 128, 1) 85%, rgba(19, 66, 128, 1) 100%);
+  background: -o-linear-gradient(left, rgba(19, 66, 128, 1) 0%, rgba(16, 57, 112, 1) 18%, rgba(22, 78, 150, 1) 50%, rgba(25, 80, 153, 1) 51%, rgba(21, 76, 148, 1) 71%, rgba(19, 66, 128, 1) 85%, rgba(19, 66, 128, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(19, 66, 128, 1) 0%, rgba(16, 57, 112, 1) 18%, rgba(22, 78, 150, 1) 50%, rgba(25, 80, 153, 1) 51%, rgba(21, 76, 148, 1) 71%, rgba(19, 66, 128, 1) 85%, rgba(19, 66, 128, 1) 100%);
+  background: linear-gradient(to right, rgba(19, 66, 128, 1) 0%, rgba(16, 57, 112, 1) 18%, rgba(22, 78, 150, 1) 50%, rgba(25, 80, 153, 1) 51%, rgba(21, 76, 148, 1) 71%, rgba(19, 66, 128, 1) 85%, rgba(19, 66, 128, 1) 100%);
+
+  &-logo {
+    margin: 0;
+
+    img {
+      width: 150px;
+    }
+  }
+}

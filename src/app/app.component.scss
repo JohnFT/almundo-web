@@ -1,0 +1,9 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &-content {
+    height: calc(100% - 55px);
+  }
+}

@@ -1,0 +1,45 @@
+.hotels {
+  height: 100%;
+  background-color: #f4f4f4;
+  overflow: auto;
+
+  &-filter {
+    position: sticky;
+    top: 0;
+  }
+
+  &-container {
+    max-width: 1270px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(320px, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+
+  &-list {
+    display: grid;
+    width: 100%;
+    grid-column: span 2;
+
+    app-card-hotel {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and(max-width: 1000px) {
+  .hotels {
+    &-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-filter {
+      top: 10px;
+      padding-bottom: 10px;
+      z-index: 2;
+      background-color: #f4f4f4;
+    }
+  }
+}

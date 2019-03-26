@@ -1,0 +1,76 @@
+<section class="filter">
+  <!-- Filter -->
+  <div class="filter-header">
+    <div class="filter-header-title">Filtros</div>
+  </div>
+
+  <div class="filter-container">
+    <mat-accordion>
+      <!-- Filter name -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <p class="acordion-title">
+              <i class="fas fa-search"></i> Nombre de hotel
+            </p>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="filter-name">
+          <mat-form-field class="input">
+            <input matInput placeholder="Ingrese el nombre del hotel" />
+          </mat-form-field>
+          <button class="btn-search" mat-button>Aceptar</button>
+        </div>
+      </mat-expansion-panel>
+      <!-- Filter name -->
+
+      <!-- Filter stars -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <p class="acordion-title"><i class="fas fa-star"></i> Estrellas</p>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="filter-star">
+          <mat-checkbox (change)="changeState($event, 0)">
+            <p>Todas las estrellas</p>
+          </mat-checkbox>
+
+          <mat-checkbox (change)="changeState($event, 5)">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </mat-checkbox>
+
+          <mat-checkbox (change)="changeState($event, 4)">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </mat-checkbox>
+
+          <mat-checkbox (change)="changeState($event, 3)">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </mat-checkbox>
+
+          <mat-checkbox (change)="changeState($event, 2)">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </mat-checkbox>
+
+          <mat-checkbox (change)="changeState($event, 1)">
+            <i class="fas fa-star"></i>
+          </mat-checkbox>
+        </div>
+      </mat-expansion-panel>
+      <!-- Filter stars -->
+    </mat-accordion>
+  </div>
+  <!-- Filter -->
+</section>

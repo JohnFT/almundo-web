@@ -1,0 +1,41 @@
+<article class="hotel">
+  <!-- Hotel -->
+  <mat-card>
+    <!-- Hotel content -->
+    <mat-card-content class="hotel-description">
+      <!-- Hotel Image -->
+      <div
+        class="hotel-image"
+        [style.background-image]="
+          'url(/assets/images/hotels/' + hotel.image + ')'
+        "
+      ></div>
+      <!-- / Hotel Image -->
+
+      <div class="hotel-content">
+        <!-- Hotel title -->
+        <mat-card-title class="hotel-content-title">
+          {{ hotel.name }}
+        </mat-card-title>
+        <!-- Hotel title -->
+        <div class="hotel-content-stars">
+          <ng-container *ngFor="let star of getStars(hotel.stars)">
+            <i class="fas fa-star"></i>
+          </ng-container>
+        </div>
+        <!-- /Hotel title -->
+      </div>
+    </mat-card-content>
+    <!-- Hotel content -->
+
+    <!-- Hotel price -->
+    <mat-card-content class="hotel-actions">
+      <p>Precio por noche por habitación</p>
+      <h5><span>Ars</span> {{ hotel.price }}</h5>
+      <button class="btn-hotel" mat-button>Ver hotel</button>
+    </mat-card-content>
+    <!-- Hotel price -->
+  </mat-card>
+
+  <!-- / Hotel -->
+</article>

@@ -1,0 +1,17 @@
+<section class="hotels">
+  <div class="hotels-container">
+    <!-- Hotels Filter  -->
+    <section class="hotels-filter">
+      <app-filter></app-filter>
+    </section>
+    <!-- / Hotels Filter  -->
+
+    <!-- Hotels List  -->
+    <section class="hotels-list">
+      <ng-container *ngFor="let hotel of hotels">
+        <app-card-hotel [hotel]="hotel"></app-card-hotel>
+      </ng-container>
+    </section>
+    <!-- / Hotels List  -->
+  </div>
+</section>
