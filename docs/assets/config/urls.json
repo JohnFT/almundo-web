@@ -1,4 +1,4 @@
 {
-  "almundoApi": "https://app-almundo-api.herokuapp.com/api/v1",
-  "assets": "https://app-almundo-api.herokuapp.com/assets"
+  "almundoApi": "http://localhost:3000/api/v1",
+  "assets": "http://localhost:3000/assets"
 }

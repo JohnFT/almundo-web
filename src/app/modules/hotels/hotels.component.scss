@@ -21,6 +21,7 @@
     display: grid;
     width: 100%;
     grid-column: span 2;
+    gap: 5px;
 
     app-card-hotel {
       margin-bottom: 10px;

@@ -3,11 +3,16 @@ import { Hotel } from 'src/app/modules/shared/models/hotel';
 import { AppState } from '../../store/state/filter.state';
 import { Store } from '@ngrx/store';
 import { IUrls } from 'src/app/modules/shared';
+import { trigger, transition, useAnimation } from '@angular/animations';
+import { bounceIn } from 'src/app/modules/shared/animations';
 
 @Component({
   selector: 'app-card-hotel',
   templateUrl: './card-hotel.component.html',
-  styleUrls: ['./card-hotel.component.scss']
+  styleUrls: ['./card-hotel.component.scss'],
+  animations: [
+    trigger('hotel', [transition(':enter', [useAnimation(bounceIn)])])
+  ]
 })
 export class CardHotelComponent implements OnInit {
   /**
