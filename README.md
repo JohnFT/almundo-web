@@ -5,6 +5,14 @@ Este proyecto generado con [Angular CLI](https://github.com/angular/angular-cli)
 ## Redux
 Como arquitectura de datos basa en estados
 
+
+
+## Demo
+Cilc en [Demo](https://johnft.github.io/almundo-web/)
+
+
+## Clone
+Ejecuta el comando `npm install` para instalar los modulos de la aplicación 
 ```
  > npm install
 ```
