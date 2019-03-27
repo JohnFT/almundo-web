@@ -114,7 +114,7 @@ import { HotelsModule  } from '.../modules/hotels/hotels.module';
 ### Rutas
 Contiene la configuración rutas del proyecto
 
-### Rutal disponibles
+### Ruta disponibles
 
 Lista de hoteles
 ```
