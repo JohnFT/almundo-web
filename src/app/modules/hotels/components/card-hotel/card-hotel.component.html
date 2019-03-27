@@ -17,6 +17,7 @@
         <mat-card-title class="hotel-content-title">
           {{ hotel.name }}
         </mat-card-title>
+
         <!-- Hotel title -->
         <div class="hotel-content-stars">
           <ng-container *ngFor="let star of getStars(hotel.stars)">
@@ -24,6 +25,17 @@
           </ng-container>
         </div>
         <!-- /Hotel title -->
+
+        <!-- Hotel amenities -->
+        <div class="hotel-content-amenities">
+          <ng-container *ngFor="let amenities of hotel.amenities">
+            <img
+              class="amenitie"
+              [src]="'assets/icons/amenities/' + amenities + '.svg'"
+            />
+          </ng-container>
+        </div>
+        <!-- /Hotel amenities -->
       </div>
     </mat-card-content>
     <!-- Hotel content -->

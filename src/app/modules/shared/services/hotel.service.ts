@@ -6,7 +6,7 @@ import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/state/app.state';
 import { IUrls } from '../interfaces/urls';
 import { Hotel } from '../models/hotel';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -42,6 +42,12 @@ export class HotelService {
     name?: string,
     stars?: string
   ): Observable<Hotel[]> {
-    return this.http.get<Hotel[]>(`${this.urls.almundoApi}/hotels`);
+    let params = new HttpParams();
+    params = page ? params.append('page', page.toString()) : params;
+    params = size ? params.append('size', size.toString()) : params;
+    params = name ? params.append('name', name) : params;
+    params = stars ? params.append('stars', stars) : params;
+
+    return this.http.get<Hotel[]>(`${this.urls.almundoApi}/hotels`, { params });
   }
 }

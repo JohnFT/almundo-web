@@ -20,5 +20,7 @@ export function urlsReducer(
       return state;
     case fromUrlsActions.SET_URLS:
       return { ...action.payload };
+    default:
+      return state;
   }
 }

@@ -1,6 +1,12 @@
-import { UrlsState } from './url.state';
+// ngrx
 import { ActionReducerMap } from '@ngrx/store';
+
+// states
+import { UrlsState } from './url.state';
+
+// reducers
 import { urlsReducer } from '../reducers/urls.reducer';
+
 export interface AppState {
   urls: UrlsState;
 }

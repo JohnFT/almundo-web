@@ -1,10 +1,16 @@
 <section class="filter">
   <!-- Filter -->
-  <div class="filter-header">
+  <div class="filter-header" (click)="changeFilter()">
     <div class="filter-header-title">Filtros</div>
+    <div class="filter-header-title small">
+      Filtrar
+
+      <i class="fas fa-caret-down" *ngIf="!isfilter"></i>
+      <i class="fas fa-caret-up" *ngIf="isfilter"></i>
+    </div>
   </div>
 
-  <div class="filter-container">
+  <div class="filter-container" [class.actived]="isfilter">
     <mat-accordion>
       <!-- Filter name -->
       <mat-expansion-panel>
@@ -18,9 +24,15 @@
 
         <div class="filter-name">
           <mat-form-field class="input">
-            <input matInput placeholder="Ingrese el nombre del hotel" />
+            <input
+              matInput
+              placeholder="Ingrese el nombre del hotel"
+              [(ngModel)]="filter.name"
+            />
           </mat-form-field>
-          <button class="btn-search" mat-button>Aceptar</button>
+          <button class="btn-search" (click)="findHotelByName()" mat-button>
+            Aceptar
+          </button>
         </div>
       </mat-expansion-panel>
       <!-- Filter name -->

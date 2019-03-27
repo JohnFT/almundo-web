@@ -8,9 +8,17 @@
 
     <!-- Hotels List  -->
     <section class="hotels-list">
-      <ng-container *ngFor="let hotel of hotels">
+      <div
+        infiniteScroll
+        [infiniteScrollDistance]="2"
+        [infiniteScrollThrottle]="200"
+        [infiniteScrollContainer]="selector"
+        [fromRoot]="true"
+        (scrolled)="onScroll()"
+        *ngFor="let hotel of hotels"
+      >
         <app-card-hotel [hotel]="hotel"></app-card-hotel>
-      </ng-container>
+      </div>
     </section>
     <!-- / Hotels List  -->
   </div>
