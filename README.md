@@ -1,27 +1,119 @@
-# Almundo-Web
+# Almundo
+Este proyecto generado con [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0. implementa [@angular/materia](https://material.angular.io) + [@ngrx](https://ngrx.io/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 
-## Development server
+## Redux
+Como arquitectura de datos basa en estados
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+ > npm install
+```
 
-## Code scaffolding
+## Modo Desarrollo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ejecuta el comando `ng server` para levantar servidor. Navegar a `http://localhost:4200/`. La app automáticamente recarga el navegado si hay cambios en los archivos.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Ejecuta el comando`ng build` para transpilar el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/`. Use el indicador `-prod` o el comando `--prod` para una transpilacion de producción.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Configuracion
 
-## Running end-to-end tests
+El archivo urls.json dentro de la carpeta ./assets/config pose los atributos almundoApi Host de los servicios, ruta publica donde esta desplegado el proyecto almundo-API y assets ruta publica donde esta desplegado los assetes de la aplicación
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Estructura del proyecto
+ ```
+-app
+--modules
+---hotels
+----components
+-----card-hotel
+-----filter
+-----store
+---shared
+----animations
+----interfaces
+----models
+----services
+--store
+--components
+---header
+-assets
+--config
+---config.json
+```
+### Modulos
 
-## Further help
+#### Shared Modulo
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Contiene los componentes, modules, interfaces, servicios, importaciones, declaraciones que puedan ser utilizados por otros modulos
+
+##### contenido
+Componentes: 
+
+Interfaces:
+  hotel: Esta interfas define un hotel y puede ser accedida desde cualquier otro modulo
+Module:
+  hotel: Esta Modelo define un hotel y puede ser accedida desde cualquier otro modulo
+Services:
+ hotel.services: Servicio para obtener los hoteles filtrados
+ url.services: Servicio para obtener las urls de la api y assets
+ Animations:
+  animaciones angular
+
+  
+  
+##### uso
+
+En los módulos donde se quiera utilizar archivo de configuración del modulo debe importar SharedModule 
+
+```
+import { SharedModule } from '.../shared/shared.module';
+@NgModule({
+  imports: [
+    ...,
+    SharedModule
+  ],...);
+```
+
+### Modulos
+
+#### Hotels Modulo
+
+Contiene los componentes, importaciones, declaraciones utilizados en la vista de hoteles
+
+##### contenido
+componentes: 
+  Card-hotel: Este componente contine el template view de un hotel,
+  Filter: Este componente contine el template view de los filtros se comunica con el Store para ejecutar las accionde de filtrar,
+
+
+##### uso
+En los módulos donde se quiera utilizar archivo de configuración del modulo debe importar SharedModule 
+
+```
+import { HotelsModule  } from '.../modules/hotels/hotels.module';
+@NgModule({
+  imports: [
+    ...,
+    HotelsModule
+  ],...);
+```
+
+
+
+### Rutas
+Contiene la configuración rutas del proyecto
+
+### Rutal disponibles
+
+Lista de hoteles
+```
+http://localhost:4200/
+```
+
+
+## Autor
+
+* **John Alexander Fonseca Tumay**
