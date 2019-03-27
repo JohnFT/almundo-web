@@ -28003,7 +28003,7 @@
           return function() {};
         })(),
         j = n('mrSG'),
-        P = { almundoApi: null };
+        P = { almundoApi: null, assets: null };
       function I(t, e) {
         switch ((void 0 === t && (t = P), e.type)) {
           case i:
