@@ -7,7 +7,7 @@
       <div
         class="hotel-image"
         [style.background-image]="
-          'url(/assets/images/hotels/' + hotel.image + ')'
+          'url(' + urls.assets + '/images/hotels/' + hotel.image + ')'
         "
       ></div>
       <!-- / Hotel Image -->
@@ -31,7 +31,7 @@
           <ng-container *ngFor="let amenities of hotel.amenities">
             <img
               class="amenitie"
-              [src]="'assets/icons/amenities/' + amenities + '.svg'"
+              [src]="urls.assets + '/icons/amenities/' + amenities + '.svg'"
             />
           </ng-container>
         </div>

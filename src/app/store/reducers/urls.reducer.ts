@@ -6,7 +6,8 @@ import * as fromUrlsActions from '../actions/urls.actions';
 
 // init state
 const initState: UrlsState = {
-  almundoApi: null
+  almundoApi: null,
+  assets: null
 };
 
 export function urlsReducer(
